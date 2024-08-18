@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liaison de Compte de Retrait</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .form-container {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            width: 100%;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .form-container input, .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+        .submitted-info {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            width: 100%;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .submitted-info p {
+            margin: 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        Liaison de Compte de Retrait
+    </div>
+
+    <div class="content">
+        <div class="form-container">
+            <form id="retraitForm">
+                <label for="numero">Numéro du portefeuille :</label>
+                <input type="text" id="numero" name="numero" required>
+                
+                <label for="operateur">Sélectionnez l'opérateur :</label>
+                <select id="operateur" name="operateur" required>
+                    <option value="">-- Sélectionner --</option>
+                    <option value="MTN">MTN</option>
+                    <option value="Moov">Moov</option>
+                    <option value="Orange">Orange</option>
+                    <option value="WAVE">WAVE</option>
+                </select>
+                
+                <label for="code">Code secret :</label>
+                <input type="password" id="code" name="code" required>
+                
+                <button type="submit">Soumettre</button>
+            </form>
+        </div>
+
+        <div id="submittedInfo" class="submitted-info" style="display:none;">
+            <!-- Les informations soumises seront affichées ici -->
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('retraitForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            var numero = document.getElementById('numero').value;
+            var operateur = document.getElementById('operateur').value;
+            var code = document.getElementById('code').value;
+            
+            var infoDiv = document.getElementById('submittedInfo');
+            infoDiv.innerHTML = `
+                <p><strong>Numéro du portefeuille :</strong> ${numero}</p>
+                <p><strong>Opérateur :</strong> ${operateur}</p>
+                <p><strong>Code secret :</strong> ${code}</p>
+            `;
+            infoDiv.style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>

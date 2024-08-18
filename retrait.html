@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retirer Votre Argent</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .content {
+            padding: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .content p {
+            margin: 20px 0;
+        }
+        .content input {
+            padding: 10px;
+            margin: 10px 0;
+            width: calc(100% - 22px);
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .content button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+        .content button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        Retrait sur la plateforme Mexicom
+    </div>
+
+    <div class="content">
+        <p>Veuillez retirer votre gain tranquillement sans problème. Si le retrait est refusé, veuillez vérifier votre portefeuille.</p>
+        <p><strong>Minimum de retrait : 1000 FCFA</strong></p>
+        <form action="confirmation-retrait.html" method="get">
+    <input type="number" name="montant" placeholder="Montant à retirer" required>
+    <input type="text" name="code" placeholder="Code de confirmation" required>
+    <button type="submit">Retirer</button>
+</form>
+            
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recharge avec Mexicom</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .info {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            width: 100%;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+        .info p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .form-container {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            width: 100%;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        Veuillez recharger avec Mexicom
+    </div>
+
+    <div class="content">
+        <div class="info">
+            <p>Veuillez copier l'un des numéros ci-dessous et faites le paiement.</p>
+            <p><strong>Orange Money :</strong> 0703037591</p>
+            <p><strong>MTN Money :</strong> 0554049897</p>
+            <p><strong>WAVE :</strong> 0703037591</p>
+            <p><strong>Moov Money :</strong> 0140719995</p>
+        </div>
+
+        <div class="form-container">
+            <form id="rechargeForm">
+                <label for="montant">Montant à recharger :</label>
+                <input type="number" id="montant" name="montant" required>
+                
+                <label for="numero">Veuillez insérer votre numéro de paiement :</label>
+                <input type="text" id="numero" name="numero" required>
+                
+                <label for="idTransaction">ID de transaction :</label>
+                <input type="text" id="idTransaction" name="idTransaction" required>
+                
+                <label for="preuve">Preuve de paiement :</label>
+                <input type="file" id="preuve" name="preuve" accept="image/*" required>
+                
+                <button type="submit">Soumettre</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('rechargeForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = 'confirmation.html';  // Redirection vers la page de confirmation
+        });
+    </script>
+
+</body>
+</html>

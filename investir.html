@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'Investissement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        .vip-level {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #e6ffe6;
+        }
+        .vip-level h2 {
+            margin-top: 0;
+            color: #4CAF50;
+        }
+        .vip-details {
+            margin-bottom: 10px;
+        }
+        .vip-details span {
+            font-weight: bold;
+        }
+        .btn-invest {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #4CAF50;
+            text-align: center;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn-invest:hover {
+            background-color: #45a049;
+        }
+        .error-message {
+            color: red;
+            margin-top: 10px;
+            display: none; /* Cacher le message par défaut */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Investissements VIP</h1>
+
+        <div class="vip-level">
+            <h2>VIP 1</h2>
+            <div class="vip-details">
+                <p><span>Coût:</span> 6.000 FCFA</p>
+                <p><span>Gain par jour:</span> 1.000 FCFA</p>
+                <p><span>Durée:</span> 20 jours</p>
+                <p><span>Revenus Totaux:</span> 20.000 FCFA</p>
+            </div>
+            <a href="#" class="btn-invest" onclick="showErrorMessage(this)">Louer la machine</a>
+            <p class="error-message">Solde insuffisant pour investir le niveau.</p>
+        </div>
+
+        <div class="vip-level">
+            <h2>VIP 2</h2>
+            <div class="vip-details">
+                <p><span>Coût:</span> 12.000 FCFA</p>
+                <p><span>Gain par jour:</span> 2.000 FCFA</p>
+                <p><span>Durée:</span> 20 jours</p>
+                <p><span>Revenus Totaux:</span> 40.000 FCFA</p>
+            </div>
+            <a href="#" class="btn-invest" onclick="showErrorMessage(this)">Louer la machine</a>
+            <p class="error-message">Solde insuffisant pour investir le niveau.</p>
+        </div>
+
+        <div class="vip-level">
+            <h2>VIP 3</h2>
+            <div class="vip-details">
+                <p><span>Coût:</span> 18.000 FCFA</p>
+                <p><span>Gain par jour:</span> 3.000 FCFA</p>
+                <p><span>Durée:</span> 20 jours</p>
+                <p><span>Revenus Totaux:</span> 60.000 FCFA</p>
+            </div>
+            <a href="#" class="btn-invest" onclick="showErrorMessage(this)">Louer la machine</a>
+            <p class="error-message">Solde insuffisant pour investir le niveau.</p>
+        </div>
+
+        <div class="vip-level">
+            <h2>VIP 4</h2>
+            <div class="vip-details">
+                <p><span>Coût:</span> 24.000 FCFA</p>
+                <p><span>Gain par jour:</span> 4.000 FCFA</p>
+                <p><span>Durée:</span> 20 jours</p>
+                <p><span>Revenus Totaux:</span> 80.000 FCFA</p>
+            </div>
+            <a href="#" class="btn-invest" onclick="showErrorMessage(this)">Louer la machine</a>
+            <p class="error-message">Solde insuffisant pour investir le niveau.</p>
+        </div>
+
+        <div class="vip-level">
+            <h2>VIP 5</h2>
+            <div class="vip-details">
+                <p><span>Coût:</span> 30.000 FCFA</p>
+                <p><span>Gain par jour:</span> 5.000 FCFA</p>
+                <p><span>Durée:</span> 20 jours</p>
+                <p><span>Revenus Totaux:</span> 100.000 FCFA</p>
+            </div>
+            <a href="#" class="btn-invest" onclick="showErrorMessage(this)">Louer la machine</a>
+            <p class="error-message">Solde insuffisant pour investir le niveau.</p>
+        </div>
+
+        <div class="vip-level">
+            <h2>VIP 6</h2>
+            <div class="vip-details">
+                <p><span>Coût:</span> 36.000 FCFA</p>
+                <p><span>Gain par jour:</span> 6.000 FCFA</p>
+                <p><span>Durée:</span> 20 jours</p>
+                <p><span>Revenus Totaux:</span> 120.000 FCFA</p>
+            </div>
+            <a href="#" class="btn-invest" onclick="showErrorMessage(this)">Louer la machine</a>
+            <p class="error-message">Solde insuffisant pour investir le niveau.</p>
+        </div>
+
+        <div class="vip-level">
+            <h2>VIP 7</h2>
+            <div class="vip-details">
+                <p><span>Coût:</span> 42.000 FCFA</p>
+                <p><span>Gain par jour:</span> 7.000 FCFA</p>
+                <p><span>Durée:</span> 20 jours</p>
+                <p><span>Revenus Totaux:</span> 140.000 FCFA</p>
+            </div>
+            <a href="#" class="btn-invest" onclick="showErrorMessage(this)">Louer la machine</a>
+            <p class="error-message">Solde insuffisant pour investir le niveau.</p>
+        </div>
+
+        <div class="vip-level">
+            <h2>VIP 8</h2>
+            <div class="vip-details">
+                <p><span>Coût:</span> 48.000 FCFA</p>
+                <p><span>Gain par jour:</span> 8.000 FCFA</p>
+                <p><span>Durée:</span> 20 jours</p>
+                <p><span>Revenus Totaux:</span> 160.000 FCFA</p>
+            </div>
+            <a href="#" class="btn-invest" onclick="showErrorMessage(this)">Louer la machine</a>
+            <p class="error-message">Solde insuffisant pour investir le niveau.</p>
+        </div>
+
+        <div class="vip-level">
+            <h2>VIP 9</h2>
+            <div class="vip-details">
+                <p><span>Coût:</span> 54.000 FCFA</p>
+                <p><span>Gain par jour:</span> 9.000 FCFA</p>
+                <p><span>Durée:</span> 20 jours</p>
+                <p><span>Revenus Totaux:</span> 180.000 FCFA</p>
+            </div>
+            <a href="#" class="btn-invest" onclick="showErrorMessage(this)">Louer la machine</a>
+            <p class="error-message">Solde insuffisant pour investir le niveau.</p>
+        </div>
+
+        <div class="vip-level">
+            <h2>VIP 10</h2>
+            <div class="vip-details">
+                <p><span>Coût:</span> 150.000 FCFA</p>
+                <p><span>Gain par jour:</span> 57.000 FCFA</p>
+                <p><span>Durée:</span> 15 jours</p>
+                <p><span>Revenus Totaux:</span> 855.000 FCFA</p>
+            </div>
+            <a href="#" class="btn-invest" onclick="showErrorMessage(this)">Louer la machine</a>
+            <p class="error-message">Solde insuffisant pour investir le niveau.</p>
+        </div>
+
+        <!-- Sections VIP bientôt disponibles -->
+        <div class="vip-level">
+            <h2>VIP 11</h2>
+            <div class="vip-details">
+                <p>Disponible bientôt</p>
+            </div>
+            <a href="#" class="btn-invest" onclick="showErrorMessage(this)">Louer la machine</a>
+            <p class="error-message">Solde insuffisant pour investir le niveau.</p>
+        </div>
+
+        <div class="vip-level">
+            <h2>VIP 12</h2>
+            <div class="vip-details">
+                <p>Disponible bientôt</p>
+            </div>
+            <a href="#" class="btn-invest" onclick="showErrorMessage(this)">Louer la machine</a>
+            <p class="error-message">Solde insuffisant pour investir le niveau.</p>
+        </div>
+
+        <div class="vip-level">
+            <h2>VIP 13</h2>
+            <div class="vip-details">
+                <p>Disponible bientôt</p>
+            </div>
+            <a href="#" class="btn-invest" onclick="showErrorMessage(this)">Louer la machine</a>
+            <p class="error-message">Solde insuffisant pour investir le niveau.</p>
+        </div>
+
+        <div class="vip-level">
+            <h2>VIP 14</h2>
+            <div class="vip-details">
+                <p>Disponible bientôt</p>
+            </div>
+            <a href="#" class="btn-invest" onclick="showErrorMessage(this)">Louer la machine</a>
+            <p class="error-message">Solde insuffisant pour investir le niveau.</p>
+        </div>
+
+        <div class="vip-level">
+            <h2>VIP 15</h2>
+            <div class="vip-details">
+                <p>Disponible bientôt</p>
+            </div>
+            <a href="#" class="btn-invest" onclick="showErrorMessage(this)">Louer la machine</a>
+            <p class="error-message">Solde insuffisant pour investir le niveau.</p>
+        </div>
+    </div>
+
+    <script>
+        function showErrorMessage(button) {
+            const errorMessage = button.nextElementSibling;
+            errorMessage.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

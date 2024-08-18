@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation avec Code de Parrainage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .invitation {
+            background-color: #000;
+            color: white;
+            padding: 20px;
+            width: 100%;
+            max-width: 600px; /* Largeur ajustée */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .code {
+            font-size: 24px;
+            color: #4CAF50; /* Couleur verte */
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .copy-button {
+            background-color: #4CAF50; /* Couleur verte */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .copy-button:hover {
+            background-color: #388E3C; /* Couleur verte au survol */
+        }
+        .bonus {
+            font-size: 18px;
+            color: #4CAF50; /* Couleur verte */
+            margin: 20px 0;
+        }
+        .details {
+            font-size: 16px;
+            color: white;
+            margin: 20px 0;
+        }
+        .bonus-list {
+            list-style: none;
+            padding: 0;
+        }
+        .bonus-list li {
+            font-size: 16px;
+            color: #4CAF50; /* Couleur verte */
+            margin-bottom: 10px;
+        }
+        .footer {
+            font-size: 14px;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        Invitation avec Code de Parrainage
+    </div>
+
+    <div class="content">
+        <div class="invitation">
+            <div class="code">
+                Code de parrainage : <span id="parrainage-code">67138QAR</span>
+                <button class="copy-button" onclick="copyCode()">Copier</button>
+            </div>
+            <div class="bonus">
+                Total invité : <span id="total-invites">00</span>
+            </div>
+            <div class="bonus">
+                Bonus de parrainage : <span id="bonus-parrainage">00 FCFA</span>
+            </div>
+            <div class="details">
+                <p>Veuillez copier votre code de parrainage et partager le lien d'inscription suivi de votre code pour recevoir votre bonus de parrainage.</p>
+                <p>Bonus suivant :</p>
+                <ul class="bonus-list">
+                    <li>VIP 1 : 600 FCFA</li>
+                    <li>VIP 2 : 1200 FCFA</li>
+                    <li>VIP 3 : 2400 FCFA</li>
+                    <li>VIP 4 : 4800 FCFA</li>
+                    <li>VIP 5 : 9600 FCFA</li>
+                    <li>VIP 6 : 19200 FCFA</li>
+                    <li>VIP 7 : 38400 FCFA</li>
+                    <li>VIP 8 : 76800 FCFA</li>
+                    <li>VIP 9 : 153600 FCFA</li>
+                    <li>VIP 10 : 307200 FCFA</li>
+                </ul>
+            </div>
+            <div class="footer">
+                Si vos invités louent les machines VIP, vous avez les bonus suivants et retirables.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyCode() {
+            var code = document.getElementById('parrainage-code').innerText;
+            navigator.clipboard.writeText(code).then(function() {
+                alert('Code de parrainage copié!');
+            }, function(err) {
+                console.error('Erreur de copie : ', err);
+            });
+        }
+    </script>
+
+</body>
+</html>

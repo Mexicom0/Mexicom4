@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription et Connexion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .switch {
+            margin-top: 20px;
+            color: #666;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="inscription">
+        <h2>Inscription</h2>
+        <form id="inscriptionForm">
+            <input type="text" id="numero" name="numero" placeholder="Numéro de téléphone" required>
+            <input type="password" id="password" name="password" placeholder="Mot de passe" required>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirmer le mot de passe" required>
+            <input type="text" id="parrainage" name="parrainage" placeholder="Code de parrainage" required>
+            <button type="submit">S'inscrire</button>
+        </form>
+        <p class="switch" onclick="toggleForm()">Déjà inscrit? Connectez-vous</p>
+    </div>
+
+    <div class="container" id="connexion" style="display: none;">
+        <h2>Connexion</h2>
+        <form id="connexionForm">
+            <input type="text" id="numeroConnexion" name="numero" placeholder="Numéro de téléphone" required>
+            <input type="password" id="passwordConnexion" name="password" placeholder="Mot de passe" required>
+            <button type="submit">Se connecter</button>
+        </form>
+        <p class="switch" onclick="toggleForm()">Pas encore inscrit? Inscrivez-vous</p>
+    </div>
+
+    <script>
+        function toggleForm() {
+            var inscription = document.getElementById('inscription');
+            var connexion = document.getElementById('connexion');
+            if (inscription.style.display === 'none') {
+                inscription.style.display = 'block';
+                connexion.style.display = 'none';
+            } else {
+                inscription.style.display = 'none';
+                connexion.style.display = 'block';
+            }
+        }
+
+        document.getElementById('inscriptionForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var numero = document.getElementById('numero').value;
+            localStorage.setItem('numero', numero);
+            window.location.href = 'index.html';
+        });
+
+        document.getElementById('connexionForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var numero = document.getElementById('numeroConnexion').value;
+            localStorage.setItem('numero', numero);
+            window.location.href = 'index.html';
+        });
+    </script>
+
+</body>
+</html>

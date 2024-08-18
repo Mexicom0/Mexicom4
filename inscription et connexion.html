@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'Accueil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .content .balance {
+            font-size: 32px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .content .balance span {
+            color: #4CAF50;
+            font-size: 40px;
+        }
+        .content .text-info {
+            font-size: 14px;
+            color: #333;
+            margin-top: 20px;
+            text-align: left;
+            padding: 0 10px;
+        }
+        .footer {
+            background-color: #f1f1f1;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .footer .buttons {
+            display: flex;
+            justify-content: center;
+        }
+        .footer .buttons button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 18px;
+            margin: 0 8px;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .footer .buttons button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header" id="userNumero">
+        Identifiant du compte 00
+    </div>
+
+    <div class="content">
+        <div class="balance">
+            <span id="solde">500 FCFA</span> <br> Solde Principal
+        </div>
+        <div class="text-info">
+            Cher utilisateurs de la plateforme mexicom, on vous souhaite la bienvenue sur notre société. <br><br>
+            ((La plateforme mexicom est une plateforme qui a été créée le 8 août 2024)) <br><br>
+            ((Date d'expiration de la plateforme mexicom : 8 août 2025)) <br><br>
+            Une fois rechargé, veuillez me contacter pour l'approbation de votre compte et pour vous ajouter dans le groupe Mexicom. <br><br>
+            Avec mexicom, gagnez votre argent par jour. <br><br>
+            Jour de retrait : lundi au dimanche <br>
+            Heure de dépôts et de retrait : 8h à 19h
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="buttons">
+            <button ="location.href='accueil.html'">Accueil</button>
+            <button onclick="location.href='investir.html'">Investir</button>
+            <button onclick="location.href='mon-compte.html'">Mon Compte</button>
+        </div>
+    </div>
+
+    <script>
+        var numero = localStorage.getItem('numero');
+        if (numero) {
+            document.getElementById('userNumero').textContent = 'Identifiant du compte: ' + numero;
+        }
+
+        // Exemple : Mise à jour dynamique du solde principal
+        var solde = '500 FCFA';
+        document.getElementById('solde').textContent = solde;
+    </script>
+
+</body>
+</html>

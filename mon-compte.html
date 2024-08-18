@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Compte</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .table {
+            background-color: #000;
+            color: white;
+            padding: 20px;
+            width: 100%;
+            max-width: 600px; /* Largeur du tableau ajustée */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px; /* Espacement en bas */
+            position: relative;
+        }
+        .vip {
+            display: flex;
+            align-items: center;
+            font-size: 22px; /* Taille de la police ajustée */
+            margin-bottom: 20px;
+        }
+        .vip .square {
+            width: 50px; /* Taille du carré ajustée */
+            height: 50px;
+            background-color: yellow;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px; /* Espacement ajusté */
+            border-radius: 4px;
+            font-size: 16px; /* Taille du texte ajustée */
+            font-weight: bold;
+        }
+        .details {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .details div {
+            margin-bottom: 10px;
+        }
+        .btn {
+            display: block;
+            background-color: #4CAF50; /* Couleur de fond verte */
+            color: white; /* Texte blanc */
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #388E3C; /* Couleur de fond au survol */
+        }
+        .info {
+            font-size: 14px;
+            color: #333;
+            margin-top: 20px;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .link-button {
+            display: block;
+            background-color: #4CAF50; /* Couleur de fond verte */
+            color: white; /* Texte blanc */
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .link-button:hover {
+            background-color: #388E3C; /* Couleur de fond au survol */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        Mon Compte
+    </div>
+
+    <div class="content">
+        <div class="table">
+            <div class="vip">
+                <div class="square">VIP 0</div>
+            </div>
+            <div class="details">
+                <div><strong>Gain gagné par jour :</strong> 00 FCFA</div>
+                <div><strong>Revenus total :</strong> 00 FCFA</div>
+            </div>
+            <a href="historique.html" class="btn">Historique de transaction et de retrait</a>
+            <a href="https://t.me/mexicom6" class="link-button" target="_blank">Contacter le Service Client sur Telegram</a>
+            <a href="liaison.html" class="btn">Liaison de compte de retrait</a>
+            <a href="recharge.html" class="btn">Rechargement</a>
+            <a href="invitation.html" class="btn">Invitation avec code de parrainage</a>
+            <a href="retrait.html" class="btn">Retirer votre argent 💸</a>
+        </div>
+        
+        <div class="info">
+            Une fois rechargé, veuillez me contacter pour faire l'approbation de votre compte Mexicom et vous ajouter dans le groupe. <br><br>
+            <strong>NB :</strong> En cas d'annulation de transfert, votre compte sera suspendu. Vous serez obligé de changer d'identifiant. Merci.
+        </div>
+    </div>
+
+</body>
+</html>
